@@ -10,6 +10,10 @@ public class MiniDTO {
 		this.pw = pw;
 		this.id = id;
 	}
+	public MiniDTO(int score, String id) {
+		this.score = score;
+		this.id = id;
+	}
 	public MiniDTO(int score) {
 		this.score = score;
 	}
@@ -22,8 +26,11 @@ public class MiniDTO {
 	public String getId() {
 		return id;
 	}
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
+	public int getScore() {
+		return score;
+	}
+	public void setScore(int score) {
+		this.score = score;
 	}
 	public void setPw(String pw) {
 		this.pw = pw;
