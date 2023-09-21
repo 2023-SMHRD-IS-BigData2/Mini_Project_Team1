@@ -36,4 +36,44 @@ MiniDTO dto = new MiniDTO("TESTER1", "1234", "A1");
 		System.out.println(dto.getNickname() + "씨 : (그럼 부장님이 직접 싸시든가요!!!!!!!!!!!) ");
 		System.out.println("마부장 : 요즘 mz들이 이래서 문제야 문제 쌈하나 싸는것도 못하면 앞으로 회사생활을 어떻게해");
 	}
+	
+	public void EasyScenario() {
+		System.out.println("마부장 : " + dto.getNickname() + "씨 회사생활은 할만해 아직 많이 힘들고 버겁고 그러지");
+		System.out.println(dto.getNickname() + "씨 : 괜찮습니다. 과장님도 부장님도 정말로 잘 대해주고 정말이지 이곳에 들어온게 행운이라 생각합니다");
+		System.out.println("마부장 : 그렇다면 다행이네 언제든 힘든 일 있으면 이야기 해주고 많이는 못 도와주지만 해볼 수 있는 곳까지는 도와줄께");
+		System.out.println(dto.getNickname() + "씨 : 감사합니다 마부장님 혹시 제가 쌈 한번 싸드려도 되겠습니까? 너무 고마워서 그렇습니다.");
+		System.out.println("마부장 : 하하 아우 뭔 쌈이여 ㅋㅋㅋ 그럼 어디 " + dto.getNickname() + "씨 성의도 있는데 한 쌈 받아볼까?");
+	}
+	
+	public void EasySucScenario() {
+		System.out.println("마부장 : 하하 " + dto.getNickname() + "씨 맛있는데 하하 쌈 잘싸는데 " + dto.getNickname() + "씨");
+		System.out.println(dto.getNickname() + "씨 : 하하 뭘 이정도 가지고 제가 한 쌈 할줄 압니다. 하하하");
+	}
+	
+	public void EasyFailScenario() {
+		System.out.println("마부장 : " + dto.getNickname() + "씨.... 맛있네.. 그치만 어디 가서 쌈 싸준다고 말하고 다니지 않았으면 좋겠어");
+		System.out.println(dto.getNickname() + "씨 : .....");
+	}
+	
+	public void NormalScenario() {
+		System.out.println("마부장 : " + dto.getNickname() + "씨 회사생활은 괜찮어?");
+		System.out.println(dto.getNickname() + "씨 : 하하 뭐 그럭저럭 할 만 합니다.");
+		System.out.println("마부장 : 흐음... 그렇다면 뭐 다행이구만 그나저나 " + dto.getNickname() + "씨 저번에 반려된 프로젝트는 잘 되가?");
+		System.out.println(dto.getNickname() + "씨 : 하하 뭐 거의 마무리 단계입니다.");
+		System.out.println("마부장 : 이봐...자네...(갑자기 말이 끊기며) 회사 사람들 : 자 자 지금부터 쌈 싸주기 게임을 시작합니다!!!!");
+		System.out.println("(룰렛 결과 " + dto.getNickname() + "씨가 마부장님의 쌈을 싸주기로 결과가 나오는데");
+		System.out.println(dto.getNickname() + "씨 : 헉....");
+		System.out.println("마부장 : 흠흠... 기대할께 " + dto.getNickname() + "씨 맛없으면 알지???");
+	}
+	
+	public void NormalSucScenario() {
+		System.out.println("마부장 : 하하하 " + dto.getNickname() + "씨 맛있어 자네 아주 그냥 쌈의 달인이구만 그 프로젝트는 천천히 기다리지 크하하하");
+		System.out.println(dto.getNickname() + "씨 : 감사합니다. 마부장님");
+	}
+	
+	public void NormalFailScenario() {
+		System.out.println("마부장 : 퉤퉤" + dto.getNickname() + "씨 이걸 지금 사람 먹으라고 싼 쌈이야? 나랑 싸우자는 거지");
+		System.out.println("마부장 : 남은 프로젝트 3일 내로 제출하도록 해 기대해 아주 철저하게 검토하고 확인해줄테니까!!!!!");
+		System.out.println(dto.getNickname() + "씨 : 아 부장님 죄송합니다 부장님!!!!!!!");
+	}
 }
