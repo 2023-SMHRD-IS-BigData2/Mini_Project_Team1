@@ -11,7 +11,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		while (true) {
+			
+			System.out.println("1.회원가입 2.로그인 3.전체랭크확인");
+			System.out.print("번호 입력 >> ");
 			int n = sc.nextInt();
+			
 			if (n == 1) {
 				jjo();
 			} else if (n == 2) {
@@ -25,8 +29,7 @@ public class Main {
 	}
 
 	static void jjo() {
-		System.out.println("1.회원가입 2.로그인 3.전체랭크확인");
-		int n = sc.nextInt();
+		
 		System.out.print("id 입력 : ");
 		String id = sc.next();
 		System.out.print("pw 입력 : ");
