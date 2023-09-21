@@ -1,5 +1,5 @@
 package Mini_project;
 
-public class Controller {
+public class talk {
 	
 }
