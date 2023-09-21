@@ -14,6 +14,10 @@ public class MiniDTO {
 		this.score = score;
 		this.id = id;
 	}
+	public MiniDTO(String id, String pw) {
+		this.id = id;
+		this.pw = pw;
+	}
 	public MiniDTO(int score) {
 		this.score = score;
 	}
