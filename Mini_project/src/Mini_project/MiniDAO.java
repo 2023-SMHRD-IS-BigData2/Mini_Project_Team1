@@ -153,9 +153,10 @@ public class MiniDAO {
 					
 					psmt.setString(1, li.get(i));
 					rs = psmt.executeQuery();
+					rs.next();
 					rs.getInt(1);
 					
-					sum += rs.getInt(i);
+					sum += rs.getInt(1);
 			}
 				
 			} catch (SQLException e) {
