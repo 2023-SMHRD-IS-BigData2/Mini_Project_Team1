@@ -21,10 +21,14 @@ public class game {
 		//쌈 ascii 출력
 		
 		//쌈 종류 출력 + 다음으로 가기 버튼
-		System.out.println("[1]상추 [2]꺳잎 [3]배추 [4]라이스페이퍼 [5]냅킨");
+		System.out.println("[1]상추 [2]꺳잎 [3]배추 [4]라이스페이퍼 [5]냅킨 [6]고기고르기");
+		
 		//while 문 내부
 		for(int i=0;i<3;i++) {
 			int n=sc.nextInt();
+			if(n==6) {
+				break;
+			}
 			li.add(ssam[n-1]);
 			for(int j=0;j<i;j++) {
 				if(li.get(i).equals(li.get(j))) {
@@ -40,16 +44,20 @@ public class game {
 		//사용자가 뭘 넣을 건지 고르게,(가능하면 중복 불가하게)
 		//고른거 하나하나 li에 저장
 		//만약 다음으로 골랐다면 while문 break 하고 고기 메소드 호출
-		
+		meat();	
 	}
 	
+
 	public void meat() {//고기고르기
 		//고기 ascii 출력
 		//고기 종류 출력 + 다음으로 가기 버튼
-		System.out.println("[1]삼겹살 [2]소고기 [3]목살 [4]베이컨 [5]닭다리 [6]닭가슴살 [7]코다리 [8]돼지머리");
+		System.out.println("[1]삼겹살 [2]소고기 [3]목살 [4]베이컨 [5]닭다리 [6]닭가슴살 [7]코다리 [8]돼지머리 [9]속재료 고르기");
 		//while 문 내부
 		for(int i=0;i<3;i++) {
 			int n = sc.nextInt();
+			if(n==9) {
+				break;
+			}
 			li.add(ssam[n-1]);
 			for(int j=0;j<i;j++) {
 				if(li.get(i).equals(li.get(j))) {
@@ -63,12 +71,16 @@ public class game {
 		//사용자가 뭘 넣을 건지 고르게,(가능하면 중복 불가하게)
 		//고른거 하나하나 li에 저장
 		//만약 다음으로 골랐다면 while문 break 하고 속재료 메소드 호출
+		other();
 	}
 	
 	public void other() {//속재료
-		System.out.println("[1]마늘 [2]양파 [3]고추 [4]쌈무 [5]당근 [6]김치 [7]토하젓 [8]밥 [9]올리브 [10]파프리카 [11]대파 [12] 콩나물 [13]오이 [13]소세지 [14]레몬 [15]먹태깡 [16]고수 [17]초코 [18]새우젓 [19]취두부 [20]생강 [21]토마토 [22]아보카도");
+		System.out.println("[1]마늘 [2]양파 [3]고추 [4]쌈무 [5]당근 [6]김치 [7]토하젓 [8]밥 [9]올리브 [10]파프리카 [11]대파 [12] 콩나물 [13]오이 [13]소세지 [14]레몬 [15]먹태깡 [16]고수 [17]초코 [18]새우젓 [19]취두부 [20]생강 [21]토마토 [22]아보카도 [23]소스 고르기");
 		for(int i=0;i<3;i++) {
 			int n = sc.nextInt();
+			if(n==24) {
+				break;
+			}
 			li.add(other[n-1]);
 			for(int j=0;j<i;j++) {
 				if(li.get(i).equals(li.get(j))) {
@@ -87,9 +99,12 @@ public class game {
 		//소스 ascii 출력
 		
 		//소스 종류 출력 + 다음으로 가기 버튼
-		System.out.println("[1]쌈장 [2]된장 [3]고추장 [4]고추냉이 [5]겨자 [6]초장 [7]소금 [8]후추 [9]간장");
+		System.out.println("[1]쌈장 [2]된장 [3]고추장 [4]고추냉이 [5]겨자 [6]초장 [7]소금 [8]후추 [9]간장 [10]음료고르기");
 		for(int i=0;i<3;i++) {
 			int n = sc.nextInt();
+			if(n==10) {
+				break;
+			}
 			li.add(source[n-1]);
 			for(int j=0;j<i;j++) {
 				if(li.get(i).equals(li.get(j))) {
@@ -102,6 +117,7 @@ public class game {
 		//사용자가 뭘 넣을 건지 고르게,(가능하면 중복 불가하게)
 		//고른거 하나하나 li에 저장
 		//만약 다음으로 골랐다면 while문 break 하고 음료 메소드 호출
+		source();
 	}
 	public ArrayList<String> drink() {
 		System.out.println("[1]소주 [2]맥주 [3]막걸리 [4]와인 [5]생수 [6]콜라/사이다/환타");
