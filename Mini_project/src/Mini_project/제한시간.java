@@ -27,9 +27,6 @@ public class 제한시간 {
 		TO.하();
 	}
 	
-long timeoutMillis = 60000;
-	
-	long startTimeMillis = System.currentTimeMillis();
 
 public static void 중제한시간() {
 		long timeoutMillis = 60000;
