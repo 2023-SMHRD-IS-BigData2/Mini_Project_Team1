@@ -141,8 +141,6 @@ public class MiniDAO {
 			
 			getConn();
 			
-			int num = 0;
-			
 			String sql = "select 점수 from SSAM_SCORE where 재료=?";
 			int sum = 0;
 			
