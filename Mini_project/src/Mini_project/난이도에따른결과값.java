@@ -25,10 +25,6 @@ public class 난이도에따른결과값 {
 		}//상 난이도의 결과
 
 	}
-	public static boolean Opresult() {
-		boolean EasyResult = true;//아직 결과값 받은게 없어서 true로 설정해 놓음
-		return EasyResult;
-	}
 	
 	static void EasySuccess() {
 		성공 ES = new 성공();
@@ -40,6 +36,10 @@ public class 난이도에따른결과값 {
 		EF.하();
 	}//하 난이도 실패 시 출력 메소드
 	
+	public static boolean Opresult() {
+		boolean EasyResult = true;//아직 결과값 받은게 없어서 true로 설정해 놓음
+		return EasyResult;
+	}
 	
 	public static boolean Opresult2() {
 		boolean NormalResult = true;
