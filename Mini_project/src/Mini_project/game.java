@@ -49,6 +49,7 @@ public class game {
 		System.out.println("[1]삼겹살 [2]소고기 [3]목살 [4]베이컨 [5]닭다리 [6]닭가슴살 [7]코다리 [8]돼지머리");
 		//while 문 내부
 		for(int i=0;i<3;i++) {
+			int n = sc.nextInt();
 			li.add(ssam[n-1]);
 			for(int j=0;j<i;j++) {
 				if(li.get(i).equals(li.get(j))) {
@@ -67,6 +68,7 @@ public class game {
 	public void other() {//속재료
 		System.out.println("[1]마늘 [2]양파 [3]고추 [4]쌈무 [5]당근 [6]김치 [7]토하젓 [8]밥 [9]올리브 [10]파프리카 [11]대파 [12] 콩나물 [13]오이 [13]소세지 [14]레몬 [15]먹태깡 [16]고수 [17]초코 [18]새우젓 [19]취두부 [20]생강 [21]토마토 [22]아보카도");
 		for(int i=0;i<3;i++) {
+			int n = sc.nextInt();
 			li.add(other[n-1]);
 			for(int j=0;j<i;j++) {
 				if(li.get(i).equals(li.get(j))) {
@@ -87,6 +89,7 @@ public class game {
 		//소스 종류 출력 + 다음으로 가기 버튼
 		System.out.println("[1]쌈장 [2]된장 [3]고추장 [4]고추냉이 [5]겨자 [6]초장 [7]소금 [8]후추 [9]간장");
 		for(int i=0;i<3;i++) {
+			int n = sc.nextInt();
 			li.add(source[n-1]);
 			for(int j=0;j<i;j++) {
 				if(li.get(i).equals(li.get(j))) {
@@ -103,6 +106,7 @@ public class game {
 	public ArrayList<String> drink() {
 		System.out.println("[1]소주 [2]맥주 [3]막걸리 [4]와인 [5]생수 [6]콜라/사이다/환타");
 		for(int i=0;i<3;i++) {
+			int n = sc.nextInt();
 			li.add(drink[n-1]);
 			for(int j=0;j<i;j++) {
 				if(li.get(i).equals(li.get(j))) {
