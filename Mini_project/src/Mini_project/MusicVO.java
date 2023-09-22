@@ -6,7 +6,7 @@ public class MusicVO {
 	private String path;
 	
 	// 생성자
-	public 음악VO(String path) {
+	public MusicVO(String path) {
 		this.path = path;
 	}
 
@@ -17,4 +17,4 @@ public class MusicVO {
 	
 }
 
-}
+
