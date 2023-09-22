@@ -4,6 +4,15 @@ import java.util.Scanner;
 
 public class 실패 {
 
+<<<<<<< HEAD
+
+
+
+
+
+
+=======
+>>>>>>> branch 'master' of https://github.com/2023-SMHRD-IS-BigData2/Mini_Project_Team1.git
 talk t = new talk();
 Controller con = new Controller();
 MiniDAO dao = new MiniDAO();
