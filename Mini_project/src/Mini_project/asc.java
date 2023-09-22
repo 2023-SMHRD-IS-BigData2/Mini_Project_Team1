@@ -193,7 +193,7 @@ public class asc {
 		System.out.println("⠀⠀⢰⢿⡿⠿⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
 		
 	}
-	ㄴ
+	
 	public void 고추() {
 		
 		System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⡗⠀⠀⠀⠀⠀⢠⣶⡄⠀");
