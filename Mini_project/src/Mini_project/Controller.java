@@ -11,7 +11,7 @@ public class Controller {
 	private MP3Player player;
 
 	private int currentIndex;
-
+ddd
 	public Controller() {
 		music = new MusicVO[4];
 	}
