@@ -21,7 +21,7 @@ public class MiniDAO {
 			String user = "campus_22IS_BIG2_mini_1";// db계정 유저 이름
 			String password = "smhrd1";
 			String url = "jdbc:oracle:thin:@project-db-campus.smhrd.com:1524:xe";
-			//jdbc:oracle:thin:@http://project-db-campus.smhrd.com/:1521:xe
+			// jdbc:oracle:thin:@http://project-db-campus.smhrd.com/:1521:xe
 			conn = DriverManager.getConnection(url, user, password);
 
 			if (conn != null) {
@@ -38,53 +38,52 @@ public class MiniDAO {
 		}
 
 	}
-	
-	
-	   public int join(MiniDTO mdto) {
 
-		      getConn();
-		      String sql = "insert into 회원정보 values(?,?,?)";
+	public int join(MiniDTO mdto) {
 
-		      int row = 0;
+		getConn();
+		String sql = "insert into 회원정보 values(?,?,?)";
 
-		      try {
-		         psmt = conn.prepareStatement(sql);
+		int row = 0;
 
-		         psmt.setString(1, mdto.getNickname());
-		         psmt.setString(2, mdto.getPw());
-		         psmt.setString(3, mdto.getId());
+		try {
+			psmt = conn.prepareStatement(sql);
 
-		         row = psmt.executeUpdate();
+			psmt.setString(1, mdto.getNickname());
+			psmt.setString(2, mdto.getPw());
+			psmt.setString(3, mdto.getId());
 
-		      } catch (SQLException e) {
+			row = psmt.executeUpdate();
 
-		         e.printStackTrace();
-		      } finally {
-		         getClose();
-		      }
-		      return row;
-		   }
-	   
-		public boolean login(String id, String pw) {
-			getConn();
-			String sql = "select password from 회원정보 where id=?";
-			try {
-				psmt = conn.prepareStatement(sql);
-				psmt.setString(1, id);
-				rs = psmt.executeQuery();
-				
-				rs.next();
-				if(rs.getString(1).equals(pw)) {
-					return true;
-				}
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}finally {
-				getClose();
-			}
-			return false;
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		} finally {
+			getClose();
 		}
+		return row;
+	}
+
+	public boolean login(String id, String pw) {
+		getConn();
+		String sql = "select password from 회원정보 where id=?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+
+			rs.next();
+			if (rs.getString(1).equals(pw)) {
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			getClose();
+		}
+		return false;
+	}
 
 	// 전체 순위 출력
 	public ArrayList<MiniDTO> rankAll() {
@@ -100,22 +99,50 @@ public class MiniDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
+		} finally {
 			getClose();
 		}
 		return li;
 
 	}
 
+	// 개인 순위 출력
+	public int rankSingle(String id) {
+
+		getConn();
+		int num = 0;
+		String sql = "select score from 점수 where id=?";
+
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+
+			rs = psmt.executeQuery();
+			rs.next();
+
+			num = rs.getInt(1);
+
+			int score = rs.getInt(1);
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			getClose();
+		}
+		return num;
+
+	}
+
 	private void getClose() {
 
 		try {
-			if(rs!=null)
+			if (rs != null)
 				rs.close();
-			if(psmt!=null) {
+			if (psmt != null) {
 				psmt.close();
 			}
-			if(conn!=null)
+			if (conn != null)
 				conn.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
