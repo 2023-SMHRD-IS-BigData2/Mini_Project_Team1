@@ -133,6 +133,39 @@ public class MiniDAO {
 		return num;
 
 	}
+	
+	// 음료 합계
+		public int sum() {
+			
+			getConn();
+			
+			int num = 0;
+			
+			String sql = "select 점수 from SSAM_SCORE where 재료=?";
+			int sum = 0;
+			
+			try {
+				psmt = conn.prepareStatement(sql);
+
+				ArrayList<String> li = g1.drink();
+				for(int i=0; i<li.size(); i++) {
+					
+					psmt.setString(1, li.get(i));
+					rs = psmt.executeQuery();
+					rs.getInt(1);
+					
+					sum += rs.getInt(i);
+			}
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				getClose();
+			}
+			return sum;
+		
+			
+		}
 
 	private void getClose() {
 
