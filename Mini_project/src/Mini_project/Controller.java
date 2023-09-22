@@ -9,7 +9,7 @@ public class Controller {
 	MiniDAO dao = new MiniDAO();
 	private MuseicVO[] music;
 	private MP3Player player;
-
+o
 	private int currentIndex;
 
 	public Controller() {
