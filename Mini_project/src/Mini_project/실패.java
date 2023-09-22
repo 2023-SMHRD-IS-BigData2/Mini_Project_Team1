@@ -4,13 +4,6 @@ import java.util.Scanner;
 
 public class 실패 {
 
-}
-
-
-
-
-
-
 talk t = new talk();
 Controller con = new Controller();
 MiniDAO dao = new MiniDAO();
@@ -54,11 +47,10 @@ MiniDTO dto = new MiniDTO();
 
 			int num = rankSingle(id);
 				
-			}
-		} else {
+			} else {
 			System.out.println("잘못된 선택입니다. 다시 입력해주세요.");
+			}
 
-		}
 	}
 
 }
