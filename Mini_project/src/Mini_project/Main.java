@@ -66,7 +66,7 @@ public class Main {
 
 		ArrayList<MiniDTO> li = con.returnRankAll();
 		for (int i = 0; i < li.size(); i++) {
-			System.out.print(i + 1 + "등 : " + li.get(i).getId() + " ");
+			System.out.print(i + 1 + "등 : " + li.get(i).getNickname() + " ");
 			System.out.println(li.get(i).getScore());
 		}
 	}

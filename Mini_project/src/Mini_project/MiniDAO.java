@@ -44,7 +44,7 @@ public class MiniDAO {
 	public int join(MiniDTO mdto) {
 
 		getConn();
-		String sql = "insert into 회원정보 values(?,?,?)";
+		String sql = "insert into 회원정보 values(?,?,?,0)";
 
 		int row = 0;
 
@@ -90,13 +90,14 @@ public class MiniDAO {
 	// 전체 순위 출력
 	public ArrayList<MiniDTO> rankAll() {
 		getConn();
-		String sql = "select * from 점수 order by";
+		String sql = "select NICKNAME, 점수 from 회원정보 order by 점수 desc";
 		try {
 			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
 			while (rs.next()) {
-				int score = rs.getInt(1);
-				String id = rs.getString(2);
-				li.add(new MiniDTO(score, id));
+				int score = rs.getInt(2);
+				String name = rs.getString(1);
+				li.add(new MiniDTO(score, name));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -113,7 +114,7 @@ public class MiniDAO {
 
 		getConn();
 		int num = 0;
-		String sql = "select score from 점수 where id=?";
+		String sql = "select 점수 from 회원정보 where id=?";
 
 		try {
 			psmt = conn.prepareStatement(sql);
