@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class game {
 	ArrayList<String> li = new ArrayList<>();//ArrayList 이름 : li
+	asc2 as =new asc2();
 	public void start() {
 		//게임 시작
 		ssam();
@@ -16,6 +17,7 @@ public class game {
 		//사용자가 뭘 넣을 건지 고르게,(가능하면 중복 불가하게)
 		//고른거 하나하나 li에 저장
 		//만약 다음으로 골랐다면 while문 break 하고 고기 메소드 호출
+		
 	}
 	
 	public void meat() {//고기고르기
