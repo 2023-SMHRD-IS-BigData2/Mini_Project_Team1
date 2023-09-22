@@ -81,7 +81,6 @@ public class game {
 		//고른거 하나하나 li에 저장
 		//만약 다음으로 골랐다면 while문 break 하고 소스 메소드 호출
 	}
-	int n = 0;
 	public void source() {
 		//소스 ascii 출력
 		
