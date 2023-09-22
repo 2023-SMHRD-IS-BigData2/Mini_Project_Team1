@@ -21,10 +21,56 @@ public class 제한시간 {
                 break;
             }
         }
-    }
+    }// 하 난이도의 제한시간 메소드
 	static void TimeOutFail() {
 		실패 TO = new 실패();
 		TO.하();
+	}
+	
+long timeoutMillis = 60000;
+	
+	long startTimeMillis = System.currentTimeMillis();
+
+public static void 중제한시간() {
+		long timeoutMillis = 60000;
+		
+		long startTimeMillis = System.currentTimeMillis();
+		
+		while(true) {
+			//중간 난이도 게임실행 메소드
+			
+			long currentTimeMillis = System.currentTimeMillis();
+			
+			 if (currentTimeMillis - startTimeMillis > timeoutMillis) {
+				 NormalTimeOut();
+				 break;
+			 }
+		}
+	}
+	static void NormalTimeOut() {
+		실패 NO = new 실패();
+		NO.중();
+	}
+	
+	public static void 상제한시간() {
+		long timeoutMillis = 30000;
+		
+		long startTimeMillis = System.currentTimeMillis();
+		
+		while(true) {//상급 난이도 게임실행 메소드
+			
+			long currentTimeMillis = System.currentTimeMillis();
+			
+			 if (currentTimeMillis - startTimeMillis > timeoutMillis) {
+				 HardTimeOut();
+				 break;
+			 }
+			
+		}
+	}
+	static void HardTimeOut() {
+		실패 HO = new 실패();
+		HO.상();
 	}
 	}
 
