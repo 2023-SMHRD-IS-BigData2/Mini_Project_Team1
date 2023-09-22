@@ -13,6 +13,8 @@ public class MiniDAO {
 	Connection conn = null;
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
+	
+	game g1 = new game();
 
 	private void getConn() {
 		try {
