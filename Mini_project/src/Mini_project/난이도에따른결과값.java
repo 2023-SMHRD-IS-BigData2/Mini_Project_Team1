@@ -25,6 +25,7 @@ public class 난이도에따른결과값 {
 		}//상 난이도의 결과
 
 	}
+
 	
 	static void EasySuccess() {
 		성공 ES = new 성공();
