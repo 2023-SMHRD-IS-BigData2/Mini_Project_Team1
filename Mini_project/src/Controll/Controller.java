@@ -238,7 +238,7 @@ public class Controller {
 		return sum;
 	}
 
-	public int getRank() {
+	public String getRank() {
 		return dao.singleRank(id);
 	}
 

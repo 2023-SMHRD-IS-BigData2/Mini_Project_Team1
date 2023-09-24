@@ -72,16 +72,16 @@ public class DAO {
 		return false;
 	}
 	
-	public int singleRank(String id) {
+	public String singleRank(String id) {
 		getConn();
-		int rank = 0;
+		String rank = "";
 		String sql = "select * from(SELECT id, 점수, rank() over(order by 점수 desc) as 랭킹 from 회원정보) WHERE id = ?";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			rs = psmt.executeQuery();
 			rs.next();
-			rank = rs.getInt(1);
+			rank = rs.getString(1);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
