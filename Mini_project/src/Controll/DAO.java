@@ -81,7 +81,7 @@ public class DAO {
 			psmt.setString(1, id);
 			rs = psmt.executeQuery();
 			rs.next();
-			rank = rs.getString(1);
+			rank = rs.getString(3);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
