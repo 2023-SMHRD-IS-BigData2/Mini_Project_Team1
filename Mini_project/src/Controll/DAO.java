@@ -1,21 +1,16 @@
-package Controller;
+package Controll;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 import Model.DTO;
 
+
 public class DAO {
-	ArrayList<DTO> li = new ArrayList<>();
 	Connection conn = null;
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
-	// Controller con = new Controller();
-
+	
 	private void getConn() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -26,11 +21,6 @@ public class DAO {
 			// jdbc:oracle:thin:@http://project-db-campus.smhrd.com/:1521:xe
 			conn = DriverManager.getConnection(url, user, password);
 
-			if (conn != null) {
-				System.out.println("연결 성공");
-			} else {
-				System.out.println("연결 실패");
-			}
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -41,6 +31,101 @@ public class DAO {
 
 	}
 
+	public int join(String id, String pw, String name) {
+		getConn();
+		String sql = "insert into 회원정보 values(?,?,?,0)";
+		int row=0;
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, name);
+			psmt.setString(2, pw);
+			psmt.setString(3, id);
+			row = psmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			getClose();
+		}
+		return row;
+		
+	}
+
+
+	public boolean log(String id, String pw) {
+		getConn();
+		String sql = "select password from 회원정보 where id = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+			rs.next();
+			if (rs.getString(1).equals(pw)) {
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			getClose();
+		}
+		return false;
+	}
+	
+	public int singleRank(String id) {
+		getConn();
+		int rank = 0;
+		String sql = "select * from(SELECT id, 점수, rank() over(order by 점수 desc) as 랭킹 from 회원정보) WHERE id = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+			rs.next();
+			rank = rs.getInt(1);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			getClose();
+		}
+		return rank;
+	}
+	
+	public int getNum(String id) {
+		getConn();
+		int num=0;
+		String sql = "select 점수 from 회원정보 where id = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+			rs.next();
+			num = rs.getInt(1);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			getClose();
+		}
+		return num;
+		
+	}
+	
+	public void setNum(int num, String id) {
+		getConn();
+		String sql = "update 회원정보 set 점수 = ? where id = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, num);
+			psmt.setString(2, id);
+			psmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			getClose();
+		}
+	}
+	
 	
 	public int sum(ArrayList<String> li) {
 
@@ -68,159 +153,32 @@ public class DAO {
 		return sum;
 
 	}
-
-	public int join(DTO dto) {
-
-		getConn();
-		String sql = "insert into 회원정보 values(?,?,?,0)";
-
-		int row = 0;
-
-		try {
-			psmt = conn.prepareStatement(sql);
-
-			psmt.setString(1, dto.getNickname());
-			psmt.setString(2, dto.getPw());
-			psmt.setString(3, dto.getId());
-
-			row = psmt.executeUpdate();
-
-		} catch (SQLException e) {
-
-			e.printStackTrace();
-		} finally {
-			getClose();
-		}
-		return row;
-	}
-
-	public int getUser(String id) {
-		int score = 0;
-		getConn();
-		String sql = "select 점수 from 회원정보 where id = ?";
-		try {
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, id);
-			rs = psmt.executeQuery();
-
-			rs.next();
-			score = rs.getInt(1);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			getClose();
-		}
-		return score;
-
-	}
 	
-	public void setUser(int n, String id) {
-		getConn();
-		String sql = "update 회원정보 set 점수 = ? where id = ?";
-		int score = getUser(id);
-		
-			try {
-				psmt = conn.prepareStatement(sql);
-				psmt.setLong(1, n);
-				psmt.setString(2, id);
-				psmt.executeUpdate();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}finally {
-				getClose();
-			}
-		}
-		
-		
-		
-	
-
-	public boolean login(String id, String pw) {
-		getConn();
-		String sql = "select password from 회원정보 where id=?";
-		try {
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, id);
-			rs = psmt.executeQuery();
-
-			rs.next();
-			if (rs.getString(1).equals(pw)) {
-				return true;
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} finally {
-			getClose();
-		}
-		return false;
-	}
-
-	public int rankSingle(String id) {
-
-		getConn();
-		int rank=0;
-		String sql = "select * from(SELECT id, 점수, rank() over(order by 점수 desc) as 랭킹 from 회원정보) WHERE id = ? ";
-
-		try {
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, id);
-
-			rs = psmt.executeQuery();
-			rs.next();
-			rank = rs.getInt(3);
-			
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} finally {
-			getClose();
-		}
-		return rank;
-
-	}
-
-	public String getNick(String id) {
-		getConn();
-		String sql = "select nickname from 회원정보 where id = ?";
-		String nick="";
-		try {
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, id);
-			rs = psmt.executeQuery();
-			rs.next();
-			nick = rs.getString(1);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally {
-			getClose();
-		}
-		return nick;
-	}
-	
-	public ArrayList<DTO> rankAll() {
+	public ArrayList<DTO> rankAll(){
 		getConn();
 		ArrayList<DTO> al = new ArrayList<>();
 		String sql = "select * from 회원정보 order by 점수 desc";
 		try {
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
-			while (rs.next()) {
-				al.add(new DTO(rs.getInt(4), rs.getString(1)));
+			
+			while(rs.next()) {
+				al.add(new DTO(rs.getString(1), rs.getInt(4)));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
+		}finally {
 			getClose();
 		}
 		return al;
-
+		
 	}
+	
+	
+	
 
-	private void getClose() {
+ 	private void getClose() {
 
 		try {
 			if (rs != null)
@@ -235,5 +193,9 @@ public class DAO {
 		}
 
 	}
+
+	
+	
+	
 
 }
