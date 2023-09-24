@@ -124,11 +124,47 @@ public class talk {
 	}
 	
 	public void EasyScenario(String id) {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println();
+		System.out.println();
+		System.out.println();
 		System.out.println("마부장 : " + id + "씨 회사생활은 할만해 아직 많이 힘들고 버겁고 그러지");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println(id + "씨 : 괜찮습니다. 과장님도 부장님도 정말로 잘 대해주고 정말이지 이곳에 들어온게 행운이라 생각합니다");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println("마부장 : 그렇다면 다행이네 언제든 힘든 일 있으면 이야기 해주고 많이는 못 도와주지만 해볼 수 있는 곳까지는 도와줄께");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println(id + "씨 : 감사합니다 마부장님 혹시 제가 쌈 한번 싸드려도 되겠습니까? 너무 고마워서 그렇습니다.");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println("마부장 : 하하 아우 뭔 쌈이여 ㅋㅋㅋ 그럼 어디 " + id + "씨 성의도 있는데 한 쌈 받아볼까?");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println();
+		System.out.println();
+		System.out.println();
 	}
 	
 	public void EasySucScenario(String id) {
@@ -142,14 +178,65 @@ public class talk {
 	}
 	
 	public void NormalScenario(String id) {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println();
+		System.out.println();
+		System.out.println();
 		System.out.println("마부장 : " + id + "씨 회사생활은 괜찮어?");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println(id + "씨 : 하하 뭐 그럭저럭 할 만 합니다.");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println("마부장 : 흐음... 그렇다면 뭐 다행이구만 그나저나 " + id + "씨 저번에 반려된 프로젝트는 잘 되가?");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println(id + "씨 : 하하 뭐 거의 마무리 단계입니다.");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println("마부장 : 이봐...자네...(갑자기 말이 끊기며) 회사 사람들 : 자 자 지금부터 쌈 싸주기 게임을 시작합니다!!!!");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println("(룰렛 결과 " + id + "씨가 마부장님의 쌈을 싸주기로 결과가 나오는데");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println(id + "씨 : 헉....");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println("마부장 : 흠흠... 기대할께 " + id + "씨 맛없으면 알지???");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println();
+		System.out.println();
+		System.out.println();
 	}
 	
 	public void NormalSucScenario(String id) {
