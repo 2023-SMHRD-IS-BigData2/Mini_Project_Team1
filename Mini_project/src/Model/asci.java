@@ -46,13 +46,13 @@ public class asci {
 
 	public void GOOD() {
 
-		System.out.println(" #####                       ");
-		System.out.println("#     #  ####   ####  #####  ");
-		System.out.println("#       #    # #    # #    # ");
-		System.out.println("#  #### #    # #    # #    # ");
-		System.out.println("#     # #    # #    # #    # ");
-		System.out.println("#     # #    # #    # #    # ");
-		System.out.println(" #####   ####   ####  #####  ");
+		System.out.println("   ###      ##       ##     ####    ");
+		System.out.println("  #   #    #  #     #  #     #  #   ");
+		System.out.println(" #        #    #   #    #    #   #  ");
+		System.out.println(" #  ###   #    #   #    #    #   #  ");
+		System.out.println(" #    #   #    #   #    #    #   #  ");
+		System.out.println("  #   #    #  #     #  #     #  #   ");
+		System.out.println("   ###      ##       ##     ####    ");
 		
 	}
 
@@ -101,7 +101,7 @@ public class asci {
 
 	public void 소스() {
 
-		System.out.println("        ....                                               ");
+		 System.out.println("        ....                                               ");
 	      System.out.println("        ,,,,,                                              ");
 	      System.out.println("        ,,---  .");
 	      System.out.println("        ,---,   ,");
@@ -121,19 +121,7 @@ public class asci {
 	      System.out.println("   .,,,,,,,,,,,,,,  ");
 	      System.out.println("  .,,,,,,,,,,,,,,,,");
 	      System.out.println("  ,,,,,,,,,,,,,,,,, ");
-	      System.out.println("  ,,,,,,,,,,,,,,,,,. ");
-	      System.out.println("  ,,,,,,,,,,,,,,,,,. ");
-	      System.out.println("  ,,,,,,,,,,,,,,,,,, ");
-	      System.out.println("  ,,,,,,,,,,,,,,,,,,  ");
-	      System.out.println("  ,,,,,,,,,,,,,,,,,,");
-	      System.out.println("  ,,,,,,,,,,,,,,,,,,");
-	      System.out.println("  ,,,,,,,,,,,,,,,,,,");
-	      System.out.println("  ,,,,,,,,,,,,,,,,,,");
-	      System.out.println("  ,,,,,,,,,,,,,,,,,,");
-	      System.out.println("  ,,,,,,,,,,,,,,,,,,");
-	      System.out.println("-,,,,,,,,,,,,,,,,,,-");
-	      System.out.println("-,,,,,,,,,,,,,,,,,,-");
-	      System.out.println("-,,,,,,,,,,,,,,,,,,-");
+	      System.out.println("-,,,,,,,,,,,,,,,,,,,-");
 	      System.out.println(" ,...---,,,,,---,.,,-");
 	      System.out.println(" -,.......,...,..,-,-");
 	      System.out.println(" -,-,...-:~~:,.,,,-,-");
