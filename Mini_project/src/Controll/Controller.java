@@ -252,14 +252,7 @@ public class Controller {
 				as.박수();
 				성공노래();
 				t.SucScenario(id);
-				if(!containsString("배추","목살","양파","당근","김치","토하젓","된장","초장","맥주","콜라/사이다/환타")) {
-					먹는소리();
-					as.Bad();
-					실패노래();
-					t.FailScenario(id);
-					sum = 0;
-				}
-			} else {
+				} else {
 				먹는소리();
 				as.Bad();
 				실패노래();
