@@ -988,6 +988,11 @@ public class asci {
 		System.out.println("'''''''''''##`               ##````                         ``##                ##```               ");
 		System.out.println("'''''''''''##`               ##````                         ``##                ##```               ");
 		System.out.println("`''''''''''##`               #################              ``## `              ################   ");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println("	    ```` `        `       ``               `  `     ``` `              `    ");
 		System.out.println("	    ` ```         ` `     ``             `  `##`                       `##  ");
 		System.out.println("	     ##``        ```##     `############``   ##`     `## `             `##  ");
@@ -1002,6 +1007,11 @@ public class asci {
 		System.out.println("	            ##``        `     `##`   `       `##       ```##           ##`  ");
 		System.out.println("	            ##`              ` ###`  ` ` ` `###`       ```##`          ##`  ");
 		System.out.println("	           `##`                 ``##########`` `         `###############`  ");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println("        ` ` `        `                              ` ```                    ````` `   ` ` ``   `        ");
 		System.out.println("    ````    ```` ` `##`                               ##``                      ##`       ```    ``  ``  ");
 		System.out.println("    `##` `  ##``   `##                 `#`    ##` `   ##        ```````` `      ##`     ``##`     ``##`  ");
@@ -1016,6 +1026,11 @@ public class asci {
 		System.out.println("      ##            ##`         `  `` `   ``   ` ```` ## `    ``````            ##`    ```##`      `##`  ");
 		System.out.println("      ##`           ##                                ## `                      ##`    ` `##`   `  `##`  ");
 		System.out.println("    ` ################                                ##                     ```##`    ");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 
 
