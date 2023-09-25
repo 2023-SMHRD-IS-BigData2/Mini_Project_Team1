@@ -12,7 +12,9 @@ public class Main {
 	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		asci as = new asci();
+		Controller con = new Controller();
 		as.title();
+		con.시작노래();
 		as.부장님();//부장님 얼굴 표현
 		talk t = new talk();
 		DAO dao = new DAO();
