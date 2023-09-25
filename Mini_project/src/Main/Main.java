@@ -7,6 +7,7 @@ import Controll.DAO;
 import Model.DTO;
 import Model.asci;
 import Model.talk;
+import javazoom.jl.player.MP3Player;
 public class Main {
 
 	static Scanner sc = new Scanner(System.in);

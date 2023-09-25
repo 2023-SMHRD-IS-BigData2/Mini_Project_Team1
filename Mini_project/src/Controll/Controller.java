@@ -1,6 +1,7 @@
 package Controll;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 import Model.DTO;
 import Model.asci;
@@ -13,6 +14,7 @@ public class Controller {
 	DAO dao = new DAO();
 	asci as = new asci();
 	talk t = new talk();
+	MP3Player player;
 	String id;
 	String pw;
 	String name;
@@ -299,7 +301,6 @@ public class Controller {
 		return dao.rankAll();
 	}
 	
-	MP3Player player;
 
 	public void 시작노래() {
 
