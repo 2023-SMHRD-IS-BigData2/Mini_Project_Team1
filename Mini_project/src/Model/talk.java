@@ -263,4 +263,30 @@ public class talk {
 		System.out.println("쌈 점수를 높게 받아 부장님의 취향을 저격해보세요! 빵야빵야!");
 		System.out.println();
 	}
+	public void hardBujang() {
+		System.out.println("김과장 : 부장님은 상추와 마늘과 소주를 좋아하십니다. \n그리고 부장님은 목살과 배추를 가장 싫어하니 주의해주세요");
+	}
+
+	public void nomalBujang() {
+		System.out.println("김과장 : 부장님은 배추와 마늘을 좋아하십니다.");
+	}
+
+	public void easyBujang() {
+		System.out.println("김과장 : 부장님은 상추쌈을 좋아하십니다.");
+	}
+	public void plusScore() {
+		System.out.println("추가점수 +300!!");
+	}
+	public void plusOther() {
+		System.out.println("속재료 1가지 더 고를 수 있습니다!");
+	}
+	public void plusMeat() {
+		System.out.println("고기 1가지 더 고를 수 있습니다!");
+	}
+	public void plusSource() {
+		System.out.println("소스 1가지 더 고를 수 있습니다!");
+	}
+	public void minScore() {
+		System.out.println("아쉽습니다 ㅜㅜ 총점 -100");
+	}
 }

@@ -1,6 +1,7 @@
 package Controll;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 import Model.DTO;
@@ -10,6 +11,7 @@ import javazoom.jl.player.MP3Player;
 
 public class Controller {
 	Scanner sc = new Scanner(System.in);
+	Random rd = new Random();
 	ArrayList<String> li = new ArrayList<>();
 	ArrayList<String> arr = new ArrayList<>();
 	DAO dao = new DAO();
@@ -19,8 +21,11 @@ public class Controller {
 	String pw;
 	String name;
 	int cls;
+	int plus1= 0;
+	int plus2= 0;
+	int plus3= 0;
 	int sum = 0;
-
+	String[] hint = {"부장 취향 힌트!!", "추가점수!!", "속재료 선택 +1","고기 선택 +1","소스 선택 +1","-100"};
 	String[] ssam = { "상추", "깻잎", "배추", "라이스페이퍼", "냅킨" };
 	String[] meat = { "삼겹살", "소고기", "목살", "베이컨", "닭다리", "닭가슴살", "코다리", "돼지머리" };
 	String[] other = { "마늘", "양파", "고추", "쌈무", "당근", "김치", "토하젓", "밥", "올리브", "파프리카", "대파", "콩나물", "오이", "소시지", "레몬",
@@ -46,7 +51,51 @@ public class Controller {
 	}
 
 	public void start() {
-		
+		as.찬스();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println("두구두구...찬스는!!!");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		int n = rd.nextInt(hint.length);
+		if(n==0) {
+			if(cls==1) {
+				as.부장입맛힌트();
+				t.hardBujang();
+			}else if(cls==2) {
+				as.부장입맛힌트();
+				t.nomalBujang();
+			}else {
+				as.부장입맛힌트();
+				t.easyBujang();
+			}
+		}else if(n==1) {
+			as.추가점수();
+			t.plusScore();
+			sum+=300;
+		}else if(n==2) {
+			as.재료추가();
+			t.plusOther();
+			plus1+=1;
+		}else if(n==3) {
+			as.재료추가();
+			t.plusMeat();
+			plus2+=1;
+		}else if(n==4) {
+			as.재료추가();
+			t.plusSource();
+			plus3+=1;
+		}else if(n==5) {
+			as.마이너스();
+			t.minScore();
+			sum-=100;
+		}
 		if(cls==1) {
 			t.Scenario(id);
 			
@@ -107,7 +156,7 @@ public class Controller {
 		}
 		System.out.print(a + ".속재료 고르기");
 		System.out.println();
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 3+plus2; i++) {
 			int n = sc.nextInt();
 			if (n == 9) {
 				break;
@@ -141,7 +190,7 @@ public class Controller {
 		}
 		System.out.print(a + ".소스 고르기");
 		System.out.println();
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 3+plus1; i++) {
 			int n = sc.nextInt();
 			if (n == 24) {
 				break;
@@ -175,7 +224,7 @@ public class Controller {
 		}
 		System.out.print(a + ".음료 고르기");
 		System.out.println();
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 3+plus3; i++) {
 			int n = sc.nextInt();
 			if (n == 15) {
 				break;
