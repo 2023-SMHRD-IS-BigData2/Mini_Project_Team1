@@ -603,91 +603,31 @@ public class asci {
 
 	public void 쌈() {
 
-		System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀ ");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⣤⣤⣤⣰⣿⣿⣦⣄⡀⠀⠀⠀⠀⠀ ");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⠀⠀⠀⣠⣤⣀⣰⣿⣿⣶⣾⣇⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀ ");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⠀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⢠⣶⣿⣿⣿⣿⣟⣿⣿⣿⣿⣿⡟⡾⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⠘⣿⣿⣿⣿⣿⣿⣾⠿⣿⣿⡿⢃⣼⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠉⠀⠀");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⢀⣼⣿⣿⣿⣿⣿⣿⡟⣿⠋⣠⣶⣿⣭⣽⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⠘⣿⣿⣿⣿⡟⣿⣿⠑⠁⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⠁⠀⠀⠀⠀⠀⠀");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⠀⠘⣿⣿⣿⡇⡿⠋⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀⠀⠀⠀");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⠀⢠⣼⣿⡿⠀⠀⠀⠚⢛⡛⠭⣷⣿⣿⣿⣿⣿⣿⣿⡟⠋⠀⠀⠀⠀⠀⠀⠀");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⠀⢸⠿⠋⠀⠀⢠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠀⠀⠀⠀⠀⠀⠀⠀");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⠀⠁⠀⠀⢀⣴⡿⣿⣿⡏⠙⢿⣿⣿⢿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("⠀⠀⠀⠐⠉⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
+		System.out.println("             --.           ");
+		System.out.println("         --------          ");
+		System.out.println("     --,,, ,---------,        ");
+		System.out.println(" ,-.-----~,-------~--         ");
+		System.out.println(" ,--------------------,        ");
+		System.out.println("  ,------------,-------~-       ");
+		System.out.println(" ,---,-------,---------~,      ");
+		System.out.println("  ,,--,------.--,,-----:-.      ");
+		System.out.println(" .,,,---,--:-,,.-------:.       ");
+		System.out.println(".,,,,,,-,--- ..--------~~       ");
+		System.out.println(",,,,,,,.,--- .----------,       ");
+		System.out.println(" ~,,,,,, --, --,,-----,         ");
+		System.out.println(" -~,,.,~,,,   ,,-..--,          ");
+		System.out.println("..,,,.,~,, -----------          ");
+		System.out.println(" ..,,.,-.  ----------           ");
+		System.out.println(" ...,.,,  ,-~---,---,           ");
+		System.out.println(" .....,.  ,-,--,-----,          ");
+		System.out.println("  .....  ,,,,,,------~.         ");
+		System.out.println("  ...   .,,.,,,----~~,          ");
+		System.out.println(" ....     ..,,,,---:.           ");
+		System.out.println(".,,   ..,,,,.,,,,~~-           ");
+		System.out.println(",,   ....,,,,---,--.           ");
+		System.out.println(".   ......,,,,-~               ");
+		System.out.println("    .-.... .,,.,.               ");
+		System.out.println("    .-                           ");
 	}
 
 	public void 유리컵() {
