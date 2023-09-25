@@ -96,6 +96,11 @@ public class Controller {
 			t.minScore();
 			sum-=100;
 		}
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		if(cls==1) {
 			t.Scenario(id);
 			
@@ -306,7 +311,7 @@ public class Controller {
 					sum = 0;
 				} else {
 					먹는소리();
-					as.박수();
+					as.GOOD();
 					성공노래();
 					t.SucScenario(id);
 				}
