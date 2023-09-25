@@ -58,7 +58,7 @@ public class Main {
 				System.out.println("난이도를 결정해주세요.");
 				System.out.println("1.상  2.중  3.하");
 				int cls = sc.nextInt();
-				con.setCls(n);
+				con.setCls(cls);
 				con.start();
 				con.check();
 				int sum = con.getSum();
