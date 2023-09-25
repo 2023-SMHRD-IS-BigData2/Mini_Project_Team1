@@ -344,5 +344,7 @@ public class Controller {
 		player.play("./효과음/씹는 소리.mp3");
 
 	}
+	
+	
 
 }
