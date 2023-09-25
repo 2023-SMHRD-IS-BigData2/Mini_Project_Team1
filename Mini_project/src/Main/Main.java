@@ -14,6 +14,7 @@ public class Main {
 		asci as = new asci();
 		talk t = new talk();
 		as.title();
+		con.시작노래();
 		as.부장님();//부장님 얼굴 표현
 		while(true) {
 			System.out.println("1.회원가입 2.로그인 3.전체랭크 확인");
