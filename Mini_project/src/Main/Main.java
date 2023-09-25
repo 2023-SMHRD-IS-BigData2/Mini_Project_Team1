@@ -65,7 +65,7 @@ public class Main {
 					
 					ArrayList<DTO> al = dao.rankAll();
 					for(int i=0; i<al.size(); i++) {
-						System.out.printf("%-2d등 : %15s  %6d 점",i+1,al.get(i).getId(),al.get(i).getScore());
+						System.out.printf("%-2d등 : %-15s  %-6d 점",i+1,al.get(i).getId(),al.get(i).getScore());
 						System.out.println();
 				
 				}
