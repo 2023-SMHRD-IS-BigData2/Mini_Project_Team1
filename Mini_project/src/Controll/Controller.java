@@ -11,6 +11,7 @@ import javazoom.jl.player.MP3Player;
 public class Controller {
 	Scanner sc = new Scanner(System.in);
 	ArrayList<String> li = new ArrayList<>();
+	ArrayList<String> arr = new ArrayList<>();
 	DAO dao = new DAO();
 	asci as = new asci();
 	talk t = new talk();
@@ -73,7 +74,6 @@ public class Controller {
 		}
 		System.out.print(a + ".고기 고르기");
 		System.out.println();
-		String[] arr = new String[3];
 		for (int i = 0; i < 3; i++) {
 			int n = sc.nextInt();
 			if (n == 6) {
@@ -82,18 +82,19 @@ public class Controller {
 				System.out.println("잘못 입력하였습니다.");
 			} else {
 				System.out.println(ssam[n - 1]);
-				arr[i] = (ssam[n - 1]);
+				arr.add(ssam[n-1]);
 				for (int j = 0; j < i; j++) {
-					if (arr[i].equals(arr[j])) {
+					if (arr.get(i).equals(arr.get(j))) {
 						System.out.println("중복 선택 하셨습니다.");
 						i--;
 					}
 				}
 			}
 		}
-		for (int i = 0; i < arr.length; i++) {
-			li.add(arr[i]);
+		for (int i = 0; i < arr.size(); i++) {
+			li.add(arr.get(i));
 		}
+		li.clear();
 		meat();
 	}
 
@@ -106,7 +107,6 @@ public class Controller {
 		}
 		System.out.print(a + ".속재료 고르기");
 		System.out.println();
-		String[] arr = new String[3];
 		for (int i = 0; i < 3; i++) {
 			int n = sc.nextInt();
 			if (n == 9) {
@@ -116,18 +116,19 @@ public class Controller {
 				i--;
 			} else {
 				System.out.println(meat[n - 1]);
-				arr[i] = (meat[n - 1]);
+				arr.add(meat[n-1]);
 				for (int j = 0; j < i; j++) {
-					if (arr[i].equals(arr[j])) {
+					if (arr.get(i).equals(arr.get(j))) {
 						System.out.println("중복 선택 하셨습니다.");
 						i--;
 					}
 				}
 			}
 		}
-		for (int i = 0; i < arr.length; i++) {
-			li.add(arr[i]);
+		for (int i = 0; i < arr.size(); i++) {
+			li.add(arr.get(i));
 		}
+		arr.clear();
 		other();
 	}
 
@@ -140,7 +141,6 @@ public class Controller {
 		}
 		System.out.print(a + ".소스 고르기");
 		System.out.println();
-		String[] arr = new String[3];
 		for (int i = 0; i < 3; i++) {
 			int n = sc.nextInt();
 			if (n == 24) {
@@ -150,18 +150,19 @@ public class Controller {
 				i--;
 			} else {
 				System.out.println(other[n - 1]);
-				arr[i] = (other[n - 1]);
+				arr.add(other[n-1]);
 				for (int j = 0; j < i; j++) {
-					if (arr[i].equals(arr[j])) {
+					if (arr.get(i).equals(arr.get(j))) {
 						System.out.println("중복 선택 하셨습니다.");
 						i--;
 					}
 				}
 			}
 		}
-		for (int i = 0; i < arr.length; i++) {
-			li.add(arr[i]);
+		for (int i = 0; i < arr.size(); i++) {
+			li.add(arr.get(i));
 		}
+		arr.clear();
 		source();
 	}
 
@@ -174,7 +175,6 @@ public class Controller {
 		}
 		System.out.print(a + ".음료 고르기");
 		System.out.println();
-		String[] arr = new String[3];
 		for (int i = 0; i < 3; i++) {
 			int n = sc.nextInt();
 			if (n == 15) {
@@ -184,18 +184,19 @@ public class Controller {
 				i--;
 			} else {
 				System.out.println(source[n - 1]);
-				arr[i] = (source[n - 1]);
+				arr.add(source[n-1]);
 				for (int j = 0; j < i; j++) {
-					if (arr[i].equals(arr[j])) {
+					if (arr.get(i).equals(arr.get(j))) {
 						System.out.println("중복 선택 하셨습니다.");
 						i--;
 					}
 				}
 			}
 		}
-		for (int i = 0; i < arr.length; i++) {
-			li.add(arr[i]);
+		for (int i = 0; i < arr.size(); i++) {
+			li.add(arr.get(i));
 		}
+		arr.clear();
 		drink();
 	}
 
@@ -208,7 +209,6 @@ public class Controller {
 		}
 		System.out.print(a + ".선택 종료");
 		System.out.println();
-		String[] arr = new String[3];
 		for (int i = 0; i < 3; i++) {
 			int n = sc.nextInt();
 			if (n == 7) {
@@ -217,18 +217,19 @@ public class Controller {
 				System.out.println("잘못 입력하였습니다.");
 			} else {
 				System.out.println(drink[n - 1]);
-				arr[i] = (drink[n - 1]);
+				arr.add(drink[n-1]);
 				for (int j = 0; j < i; j++) {
-					if (arr[i].equals(arr[j])) {
+					if (arr.get(i).equals(arr.get(j))) {
 						System.out.println("중복 선택 하셨습니다.");
 						i--;
 					}
 				}
 			}
 		}
-		for (int i = 0; i < arr.length; i++) {
-			li.add(arr[i]);
+		for (int i = 0; i < arr.size(); i++) {
+			li.add(arr.get(i));
 		}
+		arr.clear();
 		sum = dao.sum(li);
 	}
 
