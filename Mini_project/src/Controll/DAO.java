@@ -33,7 +33,7 @@ public class DAO {
 
 	public int join(String id, String pw, String name) {
 		getConn();
-		String sql = "insert into 회원정보 values(?,?,?,0,0)";
+		String sql = "insert into 회원정보 values(?,?,?,0)";
 		int row=0;
 		try {
 			psmt = conn.prepareStatement(sql);
