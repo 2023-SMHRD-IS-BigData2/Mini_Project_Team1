@@ -5,6 +5,7 @@ import java.util.*;
 import Model.DTO;
 import Model.asci;
 import Model.talk;
+import javazoom.jl.player.MP3Player;
 
 public class Controller {
 	Scanner sc = new Scanner(System.in);
@@ -246,29 +247,41 @@ public class Controller {
 		if (cls == 1) {
 			if (li.contains("상추") && li.contains("마늘") && li.contains("소주") && (sum > 3000)
 					|| li.contains("상추") && li.contains("쌈장") && li.contains("생수") && (sum > 2500) || (sum > 3500)) {
+				먹는소리();
 				as.박수();
+				성공노래();
 				t.SucScenario(id);
 			} else {
+				먹는소리();
 				as.Bad();
+				실패노래();
 				t.FailScenario(id);
 				sum = 0;
 			}
 		} else if (cls == 2) {
 			if (li.contains("상추") && li.contains("쌈장") && (sum > 2500)
 					|| li.contains("배추") && li.contains("마늘") && (sum > 1500) || (sum >= 3000)) {
+				먹는소리();
 				as.GOOD();
+				성공노래();
 				t.NormalSucScenario(id);
 			} else {
+				먹는소리();
 				as.Bad();
+				실패노래();
 				t.NormalFailScenario(id);
 				sum = 0;
 			}
 		} else {
 			if ((li.contains("상추") && (sum > 800)) || (li.contains("배추") && (sum > 1000)) || (sum >= 1500)) {
+				먹는소리();
 				as.GOOD();
+				성공노래();
 				t.EasySucScenario(id);
 			} else {
+				먹는소리();
 				as.Bad();
+				실패노래();
 				t.EasyFailScenario(id);
 				sum = 0;
 			}
@@ -284,6 +297,48 @@ public class Controller {
 
 	public ArrayList<DTO> rankAll() {
 		return dao.rankAll();
+	}
+	
+	MP3Player player;
+
+	public void 시작노래() {
+
+		if (player.isPlaying()) {
+			player.stop();
+		}
+
+		player.play("긴장감 브금.mp3");
+
+	}
+
+	public void 성공노래() {
+
+		if (player.isPlaying()) {
+			player.stop();
+		}
+
+		player.play("호응+휘파람.mp3");
+
+	}
+
+	public void 실패노래() {
+
+		if (player.isPlaying()) {
+			player.stop();
+		}
+
+		player.play("좌절 브금(두둥..).mp3");
+
+	}
+
+	public void 먹는소리() {
+
+		if (player.isPlaying()) {
+			player.stop();
+		}
+
+		player.play("씹는 소리.mp3");
+
 	}
 
 }
