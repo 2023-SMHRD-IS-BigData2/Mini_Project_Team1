@@ -16,19 +16,19 @@ public class talk {
 			e.printStackTrace();
 		}
 		System.out.println();
-		System.out.println("6개월간의 긴 스인재 과정을 마치고 마침내 취업에 성공한" + id + "씨");
+		System.out.println("6개월간의 긴 스인재 과정을 마치고 마침내 취업에 성공한 " + id + "씨");
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("아직은 어리숙하긴해도 그래도 꾸역꾸역 사회생활을 해가고 있는" + id + "씨");
+		System.out.println("아직은 어리숙하긴해도 그래도 꾸역꾸역 사회생활을 해가고 있는 " + id + "씨");
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("그런" + id + "씨는 인생 처음 회사회식을 가게 되는데.....");
+		System.out.println("그런 " + id + "씨는 인생 처음 회사회식을 가게 되는데.....");
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
@@ -60,7 +60,7 @@ public class talk {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("마부장 : 하하하하 우리" + id + "씨 회사회식도 처음인데 우리회사 전통의 쌈싸주기 한번 해볼까");
+		System.out.println("마부장 : 하하하하 우리 " + id + "씨 회사회식도 처음인데 우리회사 전통의 쌈싸주기 한번 해볼까");
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
