@@ -299,15 +299,17 @@ public class Controller {
 		return dao.rankAll();
 	}
 	
-	MP3Player player;
-
+	
+	 MP3Player player = new MP3Player();
+	 
 	public void 시작노래() {
 
 		if (player.isPlaying()) {
 			player.stop();
 		}
-
-		player.play("긴장감 브금.mp3");
+		
+		player.play("./효과음/긴장감 브금.mp3");
+		
 
 	}
 
@@ -317,7 +319,7 @@ public class Controller {
 			player.stop();
 		}
 
-		player.play("호응+휘파람.mp3");
+		player.play("./효과음/호응+휘파람.mp3");
 
 	}
 
@@ -327,7 +329,7 @@ public class Controller {
 			player.stop();
 		}
 
-		player.play("좌절 브금(두둥..).mp3");
+		player.play("./효과음/좌절 브금(두둥..).mp3");
 
 	}
 
@@ -337,7 +339,7 @@ public class Controller {
 			player.stop();
 		}
 
-		player.play("씹는 소리.mp3");
+		player.play("./효과음/씹는 소리.mp3");
 
 	}
 
