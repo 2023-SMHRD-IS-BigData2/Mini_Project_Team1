@@ -352,6 +352,14 @@ public class Controller {
 
 	}
 	
+	public void 끝남() {
+
+		if (player.isPlaying()) {
+			player.stop();
+		}
+
+	}
+	
 
 	public static boolean containsString(String input,String...substrings) {
 		for(String substring:substrings) {
