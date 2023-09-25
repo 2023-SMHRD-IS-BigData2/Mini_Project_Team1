@@ -21,7 +21,7 @@ public class Main {
 		DAO dao = new DAO();
 		while(true) {
 			
-			System.out.println("1.회원가입 2.로그인 3.전체랭크 확인");
+			System.out.println("1.회원가입 2.로그인 3.전체랭크 확인 4.게임방법");
 			int n = sc.nextInt();
 			if(n==1) {
 				System.out.print("id 입력 : ");
@@ -69,6 +69,10 @@ public class Main {
 						System.out.println();
 				
 				}
+			}else if(n==4) {
+				
+				t.rull();
+				
 			}else {
 				System.out.println("입력이 잘못되었습니다.");
 			}
