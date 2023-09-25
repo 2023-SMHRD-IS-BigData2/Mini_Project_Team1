@@ -8,7 +8,7 @@ import Model.DTO;
 import Model.asci;
 import Model.talk;
 import javazoom.jl.player.MP3Player;
-public class Main {
+public class Main_project {
 
 	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
