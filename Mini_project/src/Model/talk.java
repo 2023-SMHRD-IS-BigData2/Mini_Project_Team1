@@ -48,7 +48,7 @@ public class talk {
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("마부장 : 오" + id + "씨 회사생활은 할 만해 우리 회사 참 좋지?");
+		System.out.println("마부장 : 오 " + id + "씨 회사생활은 할 만해 우리 회사 참 좋지?");
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {

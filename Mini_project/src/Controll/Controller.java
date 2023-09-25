@@ -249,24 +249,19 @@ public class Controller {
 		if (cls == 1) {
 			if (li.contains("상추") && li.contains("마늘") && li.contains("소주") && (sum >= 4000)
 					|| li.contains("상추") && li.contains("쌈장") && li.contains("생수") && (sum > 3000) || (sum >= 5000)) {
-				먹는소리();
-				as.박수();
-				성공노래();
-				t.SucScenario(id);
-				if(!containsString("배추","목살","양파","당근","김치","토하젓","된장","초장","맥주","콜라/사이다/환타")) {
+				if(li.contains("배추")||li.contains("고추")||li.contains("목살")||li.contains("된장")||li.contains("맥주")) {
 					먹는소리();
 					as.Bad();
 					실패노래();
 					t.FailScenario(id);
 					sum = 0;
+				} else {
+					먹는소리();
+					as.박수();
+					성공노래();
+					t.SucScenario(id);
 				}
-			} else {
-				먹는소리();
-				as.Bad();
-				실패노래();
-				t.FailScenario(id);
-				sum = 0;
-			}
+				} 
 		} else if (cls == 2) {
 			if (li.contains("상추") && li.contains("쌈장") && (sum > 2500)
 					|| li.contains("배추") && li.contains("마늘") && (sum > 1500) || (sum >= 3000)) {
