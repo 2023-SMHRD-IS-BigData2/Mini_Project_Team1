@@ -249,4 +249,18 @@ public class talk {
 		System.out.println("마부장 : 남은 프로젝트 3일 내로 제출하도록 해 기대해 아주 철저하게 검토하고 확인해줄테니까!!!!!");
 		System.out.println(id + "씨 : 아 부장님 죄송합니다 부장님!!!!!!!");
 	}
+	
+	public void rull() {
+		System.out.println("로그인을 하면 게임이 바로 시작됩니다!");
+		System.out.println("게임을 시작했을 때 게임 난이도 상,중,하 중에 골라주세요.");
+		System.out.println("난이도 별로 점수가 달라 마지막 최종 랭킹 순위가 달라집니다.");
+		System.out.println("단계는 5단계까지 있으며 난이도를 고르셨으면 각 단계의 선택지마다 3개이하까지 골라주시고 넘겨주시면 됩니다.");
+		System.out.println("마지막 단계인 음료 고르기까지 하시면 실패 or 성공인지 메세지가 나오면서");
+		System.out.println("최종 점수와 최종 랭킹까지 나오니 확인을 해주시면 됩니다.");
+		System.out.println("이때 메인화면으로 돌아가기, 한번 더 하기, 종료하기 선택지가 뜨는데");
+		System.out.println("선택해서 눌러주시고 랭킹 조회는 메인화면의 전체랭크 확인에서 해주시면 됩니다.");
+		System.out.println();
+		System.out.println("쌈 점수를 높게 받아 부장님의 취향을 저격해보세요! 빵야빵야!");
+		System.out.println();
+	}
 }
