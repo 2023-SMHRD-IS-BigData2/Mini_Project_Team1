@@ -246,8 +246,8 @@ public class Controller {
 
 	public void check() {
 		if (cls == 1) {
-			if (li.contains("상추") && li.contains("마늘") && li.contains("소주") && (sum > 3000)
-					|| li.contains("상추") && li.contains("쌈장") && li.contains("생수") && (sum > 2500) || (sum > 3500)) {
+			if (li.contains("상추") && li.contains("마늘") && li.contains("소주") && (sum >= 4000)
+					|| li.contains("상추") && li.contains("쌈장") && li.contains("생수") && (sum > 3000) || (sum >= 5000)) {
 				먹는소리();
 				as.박수();
 				성공노래();
